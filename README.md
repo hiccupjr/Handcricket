@@ -1,2 +1,2 @@
 # Handcricket
-<body>  This game only can play in CLI. Not for GUI.</body>
+<body>In this game we can only play in CLI. Not for GUI.</body>
