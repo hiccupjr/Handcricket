@@ -11,7 +11,7 @@ from countdown import countdown
 banner = pyfiglet.figlet_format('Hand Cricket Game')
 print(banner)
 
-print('How to Play:')
+print('How to Play:')#Instructions
 print('\n\t1. First you have to chose Odd or Even for the toss. The toss will be very simple.\n\t   If you chose odd or even, then computer will be your alternate.')
 print('\t2. Then you and computer have to pick a number 1 to 10. It will add and show a number is Odd or Even.\n\t\tfor examble: You chose Odd. you pick a number 8 and computer pick 7.\n\t\t8+7=15. 15 is Odd number. So you win the toss. If you chosen even ,you will loss the toss.')
 print("\t3. If you win the toss you have to chose 'Batting or Bowling'. If you loss the toss then wait for the computer choice." )
@@ -21,6 +21,7 @@ print('\t6. After completing batting and bowling your score and computer score w
 
 user_name = input('Enter your name: ') 
 
+#Game loop start here
 while True:
     print ('\n1. Odd\t\t2. Even')
     toss = input('\nChoose 1 or 2 :').lower()
@@ -29,7 +30,6 @@ while True:
     if toss in ['1','odd']:
         print(f'\n{user_name} chose Odd')
         print('Then computer will be Even')
-        
     else:
         print(f'\n{user_name} chose Even')
         print('Then computer will be Odd')
@@ -65,9 +65,8 @@ while True:
             users ='loss'
             
 
-    #Game function will be start there
+    #Batting function will start when the user choose batting
     choices=['1','2','3','4','5','6']
-
     def batting() :
         print('\nReady To Batting')
         countdown(mins=0, secs=5)
@@ -115,6 +114,7 @@ while True:
                 computer_score += int(computershot)
                 print(f'\t\t\t\t\tComputer Score ={computer_score}')
         
+    #The result will be published after comparing the userscore and computer score. 
     def result(userscore,comscore):
         print('\nWait a second for the Result.')
         countdown(mins=0, secs=5)    
@@ -161,6 +161,6 @@ while True:
             
 
     play_again = input('\nDo you want play again (y/n) : ').lower()
-
+    
     if play_again not in ['y','yes']:
         break
